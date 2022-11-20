@@ -6,4 +6,11 @@
     color: #ffffff;
     margin: 0 24px 0 0;
     padding: 0;
+    transition: opacity 1s;
+}
+
+.login-status__email:hover {
+    opacity: .8;
+    cursor: pointer;
+
 }
