@@ -1,0 +1,17 @@
+.registration-page__button-enter {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    transition: opacity 1s;
+}
+
+.registration-page__button-enter:hover {
+    opacity: .8;
+    cursor: pointer;
+}

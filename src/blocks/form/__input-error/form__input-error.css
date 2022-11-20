@@ -1,0 +1,21 @@
+.form__input-error {
+  width: 238px;
+  display: block;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  position: absolute;
+  left: 22px;
+  top: calc(100% + 5px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+@media screen and (min-width: 1280px) {
+  .form__input-error {
+    left: 36px;
+    width: 358px;
+  }
+}
