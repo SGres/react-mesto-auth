@@ -28,7 +28,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [successReg, setSuccessReg] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('');
   const [isTooltipPopupOpen, setIsTooltipPopupOpen] = useState(false);
   const history = useHistory();
 
@@ -39,10 +39,10 @@ function App() {
   const handleLogin = (email, password) => {
     Auth.authorize(email, password)
       .then((res) => {
-        console.dir(res);
         if (res?.token) {
           localStorage.setItem('jwt', res.token);
           loginUser();
+          setEmail(email);
           history.push('/mesto');
         }
       })
@@ -88,14 +88,13 @@ function App() {
     if (jwt) {
       Auth.checkToken(jwt).then((res) => {
         if (res) {
-          const email = (res.data.email);
-          setEmail(email);
+          setEmail(res.data.email);
           loginUser();
           history.push('/mesto');
         }
       });
     }
-  }, [loggedIn, loginUser, history]);
+  }, []);
 
   const closeConfirmPopup = useCallback(() => {
     setIsConfirmDelCard(null);
@@ -119,7 +118,7 @@ function App() {
     ApiClass
       .deleteCard(card._id)
       .then(() => {
-        setCards((state) => state.filter((c) => c._id !== card._id && c));
+        setCards((state) => state.filter((c) => c._id !== card._id));
         closeConfirmPopup();
       })
       .catch((err) => console.log(`Ошибка удаления карточки handleCardDelete: ${err}`))
