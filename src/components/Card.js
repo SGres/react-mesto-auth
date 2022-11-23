@@ -51,4 +51,4 @@ function Card({ card, onClick, onCardLike, onDelCardClick }) {
     )
 }
 
-export default React.memo(Card);
+export default Card;

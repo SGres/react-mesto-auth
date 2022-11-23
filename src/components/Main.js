@@ -50,4 +50,4 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardDelete, onCardCli
     );
 }
 
-export default React.memo(Main);
+export default Main;

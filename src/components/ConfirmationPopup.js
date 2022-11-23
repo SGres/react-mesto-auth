@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PopupWithForm from './PopupWithForm';
 
 function ConfirmationPopup({ card, onSubmit, onClose, isRequesting }) {
