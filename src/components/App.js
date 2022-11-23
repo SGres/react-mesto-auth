@@ -28,7 +28,6 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [successReg, setSuccessReg] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
-  console.log(loggedIn);
   const [email, setEmail] = useState('')
   const [isTooltipPopupOpen, setIsTooltipPopupOpen] = useState(false);
   const history = useHistory();
